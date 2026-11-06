@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102b55">
+<title>Grand quiz LiA & MAT</title>
+<style>
+:root{--navy:#102b55;--blue:#1d4f91;--orange:#f28a2e;--bg:#f2f5fa;--ink:#17243a;--muted:#64748b;--green:#16845b;--red:#c43d4b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:linear-gradient(130deg,var(--navy),var(--blue));color:#fff;padding:28px 18px 25px;border-bottom:6px solid var(--orange)}
+.wrap{max-width:850px;margin:auto}header .tag{font-size:.8rem;letter-spacing:.12em;font-weight:800;color:#ffd4a8}h1{font-size:clamp(1.8rem,5vw,2.6rem);margin:8px 0}header p{margin:0;color:#d9e5f6}
+main{max-width:850px;margin:22px auto;padding:0 14px 40px}.intro,.question,.result{background:#fff;border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 5px 18px #102b5510}
+.intro{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.pill{background:#fff0e2;color:#9c4d0b;border-radius:30px;padding:7px 12px;font-weight:700;font-size:.85rem}
+.section-title{margin:28px 2px 10px;color:var(--blue);font-size:1.15rem;font-weight:850}
+h2{font-size:1.08rem;margin:0 0 14px}.num{color:var(--orange);font-weight:850;margin-right:7px}
+label.option{display:flex;gap:11px;align-items:center;padding:12px;margin:8px 0;border:1.5px solid #dce4ef;border-radius:11px;cursor:pointer}
+label.option:hover{border-color:var(--blue);background:#f7faff}input{accent-color:var(--blue);width:19px;height:19px;flex:none}
+.option.correct{border-color:var(--green);background:#eaf8f1}.option.wrong{border-color:var(--red);background:#fff0f1}
+.feedback{margin-top:10px;font-weight:650}.good{color:var(--green)}.bad{color:var(--red)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}button{border:0;border-radius:11px;padding:13px 18px;font-weight:750;font-size:1rem;cursor:pointer}
+#check{background:var(--orange);color:#251506;flex:1}#reset{background:#e0e8f3;color:var(--navy)}
+.result{text-align:center;display:none;border:2px solid #dce7f4}.score{font-size:2.7rem;font-weight:850;color:var(--blue)}.small{color:var(--muted);font-size:.9rem}
+footer{text-align:center;color:var(--muted);font-size:.8rem;padding:8px}
+</style></head>
+<body>
+<header><div class="wrap"><div class="tag">GRAND QUIZ TRANSPORTS</div><h1>🚌 Défi LiA et MAT</h1><p>Les deux manches réunies · 10 questions</p></div></header>
+<main>
+<section class="intro"><div><strong>À toi de jouer !</strong><div class="small">Coche une réponse pour chaque question, puis corrige le quiz complet.</div></div><span class="pill">10 points maximum</span></section>
+<form id="quiz">
+<div class="section-title">🚍 Manche 1 — Réseau LiA et MAT</div>
+<section class="question" data-answer="0" data-explain="La ligne 14, vert foncé, relie le Grand Hameau au Parc de l’Estuaire en passant par Épaville.">
+<h2><span class="num">01.</span>Quelle ligne LiA est vert foncé et relie le Grand Hameau au Parc de l’Estuaire en passant par Épaville ?</h2>
+<label class="option"><input type="radio" name="q0" value="0">La ligne 14</label><label class="option"><input type="radio" name="q0" value="1">La ligne 19</label><label class="option"><input type="radio" name="q0" value="2">La ligne 10</label><label class="option"><input type="radio" name="q0" value="3">La ligne 21</label><div class="feedback"></div></section>
+<section class="question" data-answer="0" data-explain="Tu as dit que la ligne 21 est bleu foncé et qu’on ne peut pas lui faire confiance.">
+<h2><span class="num">02.</span>Quelle ligne LiA est bleu foncé et à laquelle tu as dit qu’on ne pouvait pas faire confiance ?</h2>
+<label class="option"><input type="radio" name="q1" value="0">La ligne 21</label><label class="option"><input type="radio" name="q1" value="1">La ligne 16</label><label class="option"><input type="radio" name="q1" value="2">La ligne 19</label><label class="option"><input type="radio" name="q1" value="3">La ligne 25</label><div class="feedback"></div></section>
+<section class="question" data-answer="1" data-explain="Les lignes citées à Croix Désilles sont 1, 5, 6, P2, S5A, S5B, S111 et S306.">
+<h2><span class="num">03.</span>Quelles lignes MAT as-tu citées à l’arrêt Croix Désilles ?</h2>
+<label class="option"><input type="radio" name="q2" value="0">1, 5, 6, P1, S5A, S5B, S111 et S306</label><label class="option"><input type="radio" name="q2" value="1">1, 5, 6, P2, S5A, S5B, S111 et S306</label><label class="option"><input type="radio" name="q2" value="2">1, 5, 6, P2, S5A et S306</label><label class="option"><input type="radio" name="q2" value="3">1, 5, P2, S5B et S111</label><div class="feedback"></div></section>
+<section class="question" data-answer="0" data-explain="Tu as confirmé que les lignes 9 et 19 relient Caucriauville à la gare du Havre.">
+<h2><span class="num">04.</span>Dans notre quiz, tu as indiqué que les lignes 9 et 19 relient Caucriauville à la gare du Havre.</h2>
+<label class="option"><input type="radio" name="q3" value="0">Vrai</label><label class="option"><input type="radio" name="q3" value="1">Faux</label><div class="feedback"></div></section>
+<section class="question" data-answer="0" data-explain="Tu as donné les lignes 11 et 11E pour relier Cours Sainte-Croix à la gare du Havre.">
+<h2><span class="num">05.</span>Quelles lignes as-tu données pour relier Cours Sainte-Croix à la gare du Havre ?</h2>
+<label class="option"><input type="radio" name="q4" value="0">11 et 11E</label><label class="option"><input type="radio" name="q4" value="1">9 et 19</label><label class="option"><input type="radio" name="q4" value="2">C1 et C2</label><label class="option"><input type="radio" name="q4" value="3">14 et 21</label><div class="feedback"></div></section>
+<div class="section-title">🚏 Manche 2 — Couleurs et lignes</div>
+<section class="question" data-answer="1" data-explain="La ligne 19 Mountain est orange.">
+<h2><span class="num">06.</span>Quelle est la couleur de la ligne 19 Mountain ?</h2>
+<label class="option"><input type="radio" name="q5" value="0">Bleu</label><label class="option"><input type="radio" name="q5" value="1">Orange</label><label class="option"><input type="radio" name="q5" value="2">Vert</label><label class="option"><input type="radio" name="q5" value="3">Rouge</label><div class="feedback"></div></section>
+<section class="question" data-answer="2" data-explain="La ligne 16 Mountain est violette.">
+<h2><span class="num">07.</span>Quelle est la couleur de la ligne 16 Mountain ?</h2>
+<label class="option"><input type="radio" name="q6" value="0">Jaune</label><label class="option"><input type="radio" name="q6" value="1">Gris</label><label class="option"><input type="radio" name="q6" value="2">Violet</label><label class="option"><input type="radio" name="q6" value="3">Marron</label><div class="feedback"></div></section>
+<section class="question" data-answer="1" data-explain="La ligne retrouvée dans la liste était P2.">
+<h2><span class="num">08.</span>Quelle ligne MAT as-tu retrouvée parmi celles de l’arrêt Croix Désilles, après avoir cru qu’elle avait été oubliée ?</h2>
+<label class="option"><input type="radio" name="q7" value="0">S306</label><label class="option"><input type="radio" name="q7" value="1">P2</label><label class="option"><input type="radio" name="q7" value="2">S5A</label><label class="option"><input type="radio" name="q7" value="3">S111</label><div class="feedback"></div></section>
+<section class="question" data-answer="0" data-explain="Vrai : la ligne 13 Mountain est beige.">
+<h2><span class="num">09.</span>Tu as indiqué que la ligne 13 Mountain est beige.</h2>
+<label class="option"><input type="radio" name="q8" value="0">Vrai</label><label class="option"><input type="radio" name="q8" value="1">Faux</label><div class="feedback"></div></section>
+<section class="question" data-answer="0" data-explain="La réponse est S306 — pas S111 😉">
+<h2><span class="num">10.</span>Quelle ligne MAT as-tu citée à Croix Désilles avec le numéro 306 ?</h2>
+<label class="option"><input type="radio" name="q9" value="0">S306</label><label class="option"><input type="radio" name="q9" value="1">S5B</label><label class="option"><input type="radio" name="q9" value="2">S111</label><label class="option"><input type="radio" name="q9" value="3">Ligne 6</label><div class="feedback"></div></section>
+<div class="actions"><button id="check" type="button">Corriger mes réponses</button><button id="reset" type="reset">Recommencer</button></div>
+</form>
+<section class="result" id="result" aria-live="polite"><div class="small">TON SCORE</div><div class="score" id="score">0/10</div><strong id="message"></strong><p class="small" id="detail"></p></section>
+<footer>Quiz LiA & MAT · Fonctionne hors connexion dans ton navigateur.</footer>
+</main>
+<script>
+const form=document.getElementById('quiz'),cards=[...document.querySelectorAll('.question')],result=document.getElementById('result');
+document.getElementById('check').addEventListener('click',()=>{
+ let score=0,unanswered=0;
+ cards.forEach(card=>{
+  const selected=card.querySelector('input:checked'),answer=card.dataset.answer,feedback=card.querySelector('.feedback');
+  card.querySelectorAll('label').forEach(label=>{label.classList.remove('correct','wrong');const input=label.querySelector('input');if(input.value===answer)label.classList.add('correct');if(input.checked&&input.value!==answer)label.classList.add('wrong');});
+  if(!selected){unanswered++;feedback.innerHTML='<span class="bad">Pas de réponse cochée.</span> '+card.dataset.explain;}
+  else if(selected.value===answer){score++;feedback.innerHTML='<span class="good">✓ Bonne réponse !</span> '+card.dataset.explain;}
+  else{feedback.innerHTML='<span class="bad">✗ Pas tout à fait.</span> '+card.dataset.explain;}
+ });
+ document.getElementById('score').textContent=score+'/10';
+ document.getElementById('message').textContent=score===10?'Incroyable ! Carton plein ! 🎉':score>=7?'Excellent travail ! 👏':score>=5?'Pas mal du tout ! 😄':'On révise et on retente ! 🚌';
+ document.getElementById('detail').textContent=unanswered?unanswered+' question(s) sans réponse.':'Les 10 questions ont été corrigées.';
+ result.style.display='block';result.scrollIntoView({behavior:'smooth',block:'center'});
+});
+form.addEventListener('reset',()=>setTimeout(()=>{cards.forEach(c=>{c.querySelector('.feedback').textContent='';c.querySelectorAll('label').forEach(l=>l.classList.remove('correct','wrong'));});result.style.display='none';},0));
+</script></body></html>
